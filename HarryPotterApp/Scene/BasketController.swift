@@ -50,6 +50,7 @@ extension BasketController: UITableViewDataSource, UITableViewDelegate {
      func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             basketProducts.remove(at: indexPath.row)
+            manager.writeData(product: basketProducts)
             tableView.reloadData()
         }
     }
