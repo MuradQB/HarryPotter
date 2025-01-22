@@ -8,8 +8,10 @@
 import UIKit
 
 class BasketController: UIViewController {
-
+    
     @IBOutlet weak var table: UITableView!
+    
+    @IBOutlet weak var infoBasket: UILabel!
     
     var manager = FileManagerHelper()
     
@@ -18,7 +20,7 @@ class BasketController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUi()
-  }
+    }
     
     func configureUi() {
         title = "Selections"
@@ -27,6 +29,12 @@ class BasketController: UIViewController {
         table.register(UINib(nibName: "BasketItemCell", bundle: nil), forCellReuseIdentifier: "BasketItemCell")
         manager.readData { items in
             self.basketProducts = items
+        }
+        
+        if basketProducts.isEmpty {
+            infoBasket.text = "Empty"
+        } else {
+            infoBasket.text = "Selected Items"
         }
     }
 }
@@ -47,7 +55,7 @@ extension BasketController: UITableViewDataSource, UITableViewDelegate {
         return 150
     }
     
-     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             basketProducts.remove(at: indexPath.row)
             manager.writeData(product: basketProducts)

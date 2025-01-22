@@ -43,6 +43,7 @@
                         </subviews>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="zVJ-Ib-BV5" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.400668" id="7qB-Wd-WhD"/>
                     <constraint firstItem="zVJ-Ib-BV5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Aci-sP-kiM"/>

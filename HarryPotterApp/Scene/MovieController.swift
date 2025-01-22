@@ -20,6 +20,7 @@ class MovieController: UIViewController {
         super.viewDidLoad()
         configureUi()
     }
+    
     func configureUi() {
         collection.dataSource = self
         collection.delegate = self
@@ -53,17 +54,21 @@ class MovieController: UIViewController {
 }
 
 extension MovieController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         movies.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MovieCell.self)", for: indexPath) as! MovieCell
         cell.callBackData(name: movies[indexPath.row].name ?? "", image: movies[indexPath.row].image ?? "", time: movies[indexPath.row].time ?? "", year: movies[indexPath.row].year ?? "")
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         .init(width: collectionView.frame.width , height: 350)
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = storyboard?.instantiateViewController(identifier: "\(DetailMovieController.self)") as!
         DetailMovieController

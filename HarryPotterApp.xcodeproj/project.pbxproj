@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		CB60E0FB2D33AE6C00E685B6 /* HarryPotterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = HarryPotterApp.app; path = "/Users/muradqarayev/Desktop/HarryPotterApp/build/Debug-iphoneos/HarryPotterApp.app"; sourceTree = "<absolute>"; };
+		CB57303A2D41750B002CF3D3 /* HarryPotterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				CBC5DE172D2539980035C650 /* HarryPotterApp */,
+				CB57303A2D41750B002CF3D3 /* HarryPotterApp.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +72,7 @@
 			packageProductDependencies = (
 			);
 			productName = HarryPotterApp;
-			productReference = CB60E0FB2D33AE6C00E685B6 /* HarryPotterApp.app */;
+			productReference = CB57303A2D41750B002CF3D3 /* HarryPotterApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

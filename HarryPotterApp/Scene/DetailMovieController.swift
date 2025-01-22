@@ -11,12 +11,14 @@ import WebKit
 class DetailMovieController: UIViewController {
 
     @IBOutlet weak var myWebView: WKWebView!
+    
     var movieLink = ""
     
     func getMovies() -> URL {
         let url: URL = URL(string: "\(movieLink)")!
         return url
     }
+    
         override func viewDidLoad() {
         super.viewDidLoad()
         let preference = WKWebpagePreferences()
@@ -27,5 +29,4 @@ class DetailMovieController: UIViewController {
         configureation.defaultWebpagePreferences = preference
             myWebView.load(URLRequest(url: getMovies()))
     }
-    
 }

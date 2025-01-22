@@ -11,9 +11,11 @@ class ShopController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
     let manager = FileManagerHelper()
+    
     var selectedProducts = [ProductModel]()
     
     let productData = CoreDataForProduct(context: AppDelegate().persistentContainer.viewContext)
+    
     let categoryData = CoreDataForCategory(context: AppDelegate().persistentContainer.viewContext)
     
     override func viewDidLoad() {
@@ -72,6 +74,7 @@ extension ShopController: UICollectionViewDataSource, UICollectionViewDelegate, 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         productData.productItems.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ProductCell.self)", for: indexPath) as! ProductCell
         cell.showDatas(image: productData.productItems[indexPath.row].image ?? "",
@@ -101,5 +104,4 @@ extension ShopController: UICollectionViewDataSource, UICollectionViewDelegate, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         .init(width: collectionView.frame.width, height: 200)
     }
-    
 }
