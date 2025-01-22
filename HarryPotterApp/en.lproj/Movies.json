@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Harry Potter and the Sorcerer's Stone",
+        "image": "movie",
+        "time": "2h32m",
+        "year": "2001"
+        },
+    {
+        "name": "Harry Potter and the Chamber of Secrets",
+        "image": "movie2",
+        "time": "2h54m",
+        "year": "2002"
+        },
+    {
+        "name": "Harry Potter and the Prisoner of Azkaban",
+        "image": "movie3",
+        "time": "2h22m",
+        "year": "2004"
+        },
+    {
+        "name": "Harry Potter and the Goblet of Fire",
+        "image": "movie4",
+        "time": "2h37m",
+        "year": "2005"
+        },
+    {
+        "name": "Harry Potter and the Order of the Phoenix",
+        "image": "movie5",
+        "time": "2h18m",
+        "year": "2007"
+        },
+    {
+        "name": "Harry Potter and the Half-Blood Prince",
+        "image": "movie6",
+        "time": "2h33m",
+        "year": "2009"
+        },
+    {
+        "name": "Harry Potter and the Deathly Hallows:Part1",
+        "image": "movie7",
+        "time": "2h45m",
+        "year": "2010"
+        },
+    {
+        "name": "Harry Potter and the Deathly Hallows:Part2",
+        "image": "movie8",
+        "time": "2h55m",
+        "year": "2011"
+        }
+        
+]
